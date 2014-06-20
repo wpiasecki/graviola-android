@@ -1,5 +1,7 @@
 package org.github.wpiasecki.graviola.db;
 
+import java.util.Date;
+
 public class Coluna {
 
 	public final String nome;
@@ -33,6 +35,10 @@ public class Coluna {
 		else {
 			return nome + " " + tipo ;
 		}
+	}
+	
+	public static Coluna date(String nome) {
+		return new Coluna(nome, Date.class);
 	}
 	
 }

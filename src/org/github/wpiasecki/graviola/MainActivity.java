@@ -1,12 +1,10 @@
 package org.github.wpiasecki.graviola;
 
 import java.util.Arrays;
-import java.util.logging.LoggingPermission;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
     
     void carregarLinhas() {
     	for (String l : Arrays.asList("a", "b", "c")) {
-    		
+    		System.out.println(l);
     	}
     }
     

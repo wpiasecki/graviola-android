@@ -35,6 +35,7 @@ public class Ponto implements Tabela {
 			Coluna.integer(BaseColumns._ID),
 			Coluna.varchar("nome", 100), 
 			Coluna.integer("tipo_dia"),
+			Coluna.date("valido_a_partir_de"),
 			Coluna.integer("linha_id"),
 		};
 	}
