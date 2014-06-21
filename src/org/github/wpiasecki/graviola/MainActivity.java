@@ -2,6 +2,11 @@ package org.github.wpiasecki.graviola;
 
 import java.util.Arrays;
 
+import org.github.wpiasecki.graviola.db.HorarioOnibusContentProvider;
+import org.github.wpiasecki.graviola.modelo.Linha;
+import org.github.wpiasecki.graviola.util.Logger;
+
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -39,8 +44,11 @@ public class MainActivity extends ActionBarActivity {
     
     
     void carregarLinhas() {
-    	for (String l : Arrays.asList("a", "b", "c")) {
-    		System.out.println(l);
+    	Cursor cursor = getContentResolver().query(
+    			HorarioOnibusContentProvider.URI_LINHAS, 
+    			new String[] { Linha.NOME }, null, null, Linha.NOME);
+    	while (cursor.moveToNext()) {
+    		log.d( cursor.getString( cursor.getColumnIndex(Linha.NOME) ));
     	}
     }
     

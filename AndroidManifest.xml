@@ -24,6 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <provider
+            android:name="org.github.wpiasecki.graviola.db.HorarioOnibusContentProvider"
+            android:authorities="org.github.wpiasecki.graviola.db.HorarioOnibusContentProvider"
+            android:exported="false" />
+         
+        <service android:name=".OnibusService" />
     </application>
 
 </manifest>
