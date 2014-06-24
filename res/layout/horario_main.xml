@@ -1,0 +1,7 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <Spinner android:id="@+id/spinner_pontos" />
+    
+    <GridView android:id="@+id/grid_horarios" />
+    
+</LinearLayout>

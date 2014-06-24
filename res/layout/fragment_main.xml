@@ -9,11 +9,15 @@
     tools:context="org.github.wpiasecki.graviola.MainActivity$PlaceholderFragment" >
 
     <EditText
+        android:id="@+id/busca_linha"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/busca_linha"
         android:hint="@string/digite_linha" />
-    
-    <ListView android:id="@+id/lista_linhas"></ListView>
-    
+
+    <ListView
+        android:id="@+id/lista_linhas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
 </RelativeLayout>
